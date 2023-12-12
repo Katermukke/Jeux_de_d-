@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  height: 100vh;
+
+  .divTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3rem;
+    position: sticky;
+    height: 8rem;
+
+    #newGame {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: none;
+      background: none;
+    }
+
+    #newGame:hover {
+      svg {
+        height: 1.8rem;
+        width: 1.8rem;
+        color: red;
+      }
+    }
+
+    svg {
+      height: 2rem;
+      width: 2rem;
+      color: red;
+    }
+
+    .title {
+      font-size: 1.5rem;
+      font-weight: 300;
+      margin-bottom: 0;
+      margin-left: 1rem;
+    }
+  }
+
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    /* FIRST SECTION */
+
+    .firstSection {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 4rem;
+      margin-top: 4rem;
+
+      .firstPlayer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-inline: auto;
+
+        .playerOne {
+          font-size: 3rem;
+          font-weight: 300;
+        }
+
+        .scorePlayerTwo {
+          font-size: 6rem;
+          font-weight: 200;
+          color: red;
+        }
+      }
+
+      #diceFace {
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        height: 8rem;
+        width: 8rem;
+        margin-top: 4rem;
+        box-shadow: 2px 2px 30px rgb(153, 153, 153);
+      }
+
+      .secondPlayer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-inline: auto;
+
+        .playerTwo {
+          font-size: 3rem;
+          font-weight: 300;
+        }
+
+        .scorePlayerOne {
+          font-size: 6rem;
+          font-weight: 200;
+          color: red;
+        }
+
+        .score1 {
+          font-size: 6rem;
+          font-weight: 200;
+          color: red;
+        }
+      }
+    }
+
+    /* SECOND SECTION */
+
+    .secondSection {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+      margin-top: 10rem;
+
+      .divCurrent {
+        background-color: red;
+        width: 9.5rem;
+        height: 6.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .current {
+          font-size: 1rem;
+          font-weight: 400;
+          margin: 0;
+        }
+
+        .numbersOfCurrent {
+          font-size: 2rem;
+          font-weight: 400;
+          color: white;
+          margin: 0;
+        }
+
+        .numbersOfCurrent1 {
+          font-size: 2rem;
+          font-weight: 400;
+          color: white;
+          margin: 0;
+        }
+      }
+
+      /*.divCurrent:first-child {*/
+      div.divCurrent:nth-child(1) {
+        margin-inline: auto;
+        background-color: red;
+      }
+      div.divCurrent:nth-child(3) {
+        margin-inline: auto;
+        background-color: red;
+      }
+
+      .allButton {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        width: auto;
+
+        .divRollDice {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 15rem;
+
+          .buttonOfRollDice {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            border: none;
+            background: none;
+          }
+
+          .buttonOfRollDice:hover {
+            svg {
+              height: 2.2rem;
+              width: 2.2rem;
+              color: red;
+            }
+          }
+
+          svg {
+            height: 2.5rem;
+            width: 2.5rem;
+            color: red;
+          }
+
+          .buttonOfRollDice:hover:before .buttonOfRollDice:hover:after {
+            box-shadow: 2px 2px 30px rgb(153, 153, 153);
+            transition: all 400ms ease;
+          }
+        }
+        .divHold {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+
+          .buttonOfHold {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 4rem;
+            height: 4rem;
+            border: none;
+            background: none;
+          }
+
+          .buttonOfHold:hover {
+            svg {
+              height: 2.2rem;
+              width: 2.2rem;
+              color: red;
+            }
+          }
+
+          svg {
+            height: 2.5rem;
+            width: 2.5rem;
+            color: red;
+          }
+        }
+      }
+    }
+  }
+}

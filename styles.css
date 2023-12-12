@@ -1,0 +1,206 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  height: 100vh;
+}
+body .divTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3rem;
+  position: sticky;
+  height: 8rem;
+}
+body .divTitle #newGame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background: none;
+}
+body .divTitle #newGame:hover svg {
+  height: 1.8rem;
+  width: 1.8rem;
+  color: red;
+}
+body .divTitle svg {
+  height: 2rem;
+  width: 2rem;
+  color: red;
+}
+body .divTitle .title {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 0;
+  margin-left: 1rem;
+}
+body main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* FIRST SECTION */
+  /* SECOND SECTION */
+}
+body main .firstSection {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 4rem;
+  margin-top: 4rem;
+}
+body main .firstSection .firstPlayer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-inline: auto;
+}
+body main .firstSection .firstPlayer .playerOne {
+  font-size: 3rem;
+  font-weight: 300;
+}
+body main .firstSection .firstPlayer .scorePlayerTwo {
+  font-size: 6rem;
+  font-weight: 200;
+  color: red;
+}
+body main .firstSection #diceFace {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  height: 8rem;
+  width: 8rem;
+  margin-top: 4rem;
+  box-shadow: 2px 2px 30px rgb(153, 153, 153);
+}
+body main .firstSection .secondPlayer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-inline: auto;
+}
+body main .firstSection .secondPlayer .playerTwo {
+  font-size: 3rem;
+  font-weight: 300;
+}
+body main .firstSection .secondPlayer .scorePlayerOne {
+  font-size: 6rem;
+  font-weight: 200;
+  color: red;
+}
+body main .firstSection .secondPlayer .score1 {
+  font-size: 6rem;
+  font-weight: 200;
+  color: red;
+}
+body main .secondSection {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  margin-top: 10rem;
+  /*.divCurrent:first-child {*/
+}
+body main .secondSection .divCurrent {
+  background-color: red;
+  width: 9.5rem;
+  height: 6.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body main .secondSection .divCurrent .current {
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0;
+}
+body main .secondSection .divCurrent .numbersOfCurrent {
+  font-size: 2rem;
+  font-weight: 400;
+  color: white;
+  margin: 0;
+}
+body main .secondSection .divCurrent .numbersOfCurrent1 {
+  font-size: 2rem;
+  font-weight: 400;
+  color: white;
+  margin: 0;
+}
+body main .secondSection div.divCurrent:nth-child(1) {
+  margin-inline: auto;
+  background-color: red;
+}
+body main .secondSection div.divCurrent:nth-child(3) {
+  margin-inline: auto;
+  background-color: red;
+}
+body main .secondSection .allButton {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  width: auto;
+}
+body main .secondSection .allButton .divRollDice {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15rem;
+}
+body main .secondSection .allButton .divRollDice .buttonOfRollDice {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  border: none;
+  background: none;
+}
+body main .secondSection .allButton .divRollDice .buttonOfRollDice:hover svg {
+  height: 2.2rem;
+  width: 2.2rem;
+  color: red;
+}
+body main .secondSection .allButton .divRollDice svg {
+  height: 2.5rem;
+  width: 2.5rem;
+  color: red;
+}
+body main .secondSection .allButton .divRollDice .buttonOfRollDice:hover:before .buttonOfRollDice:hover:after {
+  box-shadow: 2px 2px 30px rgb(153, 153, 153);
+  transition: all 400ms ease;
+}
+body main .secondSection .allButton .divHold {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+body main .secondSection .allButton .divHold .buttonOfHold {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  border: none;
+  background: none;
+}
+body main .secondSection .allButton .divHold .buttonOfHold:hover svg {
+  height: 2.2rem;
+  width: 2.2rem;
+  color: red;
+}
+body main .secondSection .allButton .divHold svg {
+  height: 2.5rem;
+  width: 2.5rem;
+  color: red;
+}/*# sourceMappingURL=styles.css.map */
