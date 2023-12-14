@@ -61,8 +61,8 @@ body {
     .firstSection {
       display: flex;
       justify-content: space-around;
+      margin-top: 10rem;
       margin-bottom: 4rem;
-      margin-top: 4rem;
 
       .firstPlayer {
         display: flex;
@@ -73,7 +73,7 @@ body {
         .playerOne {
           display: flex;
           align-items: center;
-          font-size: 3rem;
+          font-size: 4rem;
           font-weight: 300;
 
           .diode {
@@ -87,7 +87,7 @@ body {
         }
 
         .scorePlayerOne {
-          font-size: 6rem;
+          font-size: 7rem;
           font-weight: 200;
           color: red;
         }
@@ -112,7 +112,7 @@ body {
         .playerTwo {
           display: flex;
           align-items: center;
-          font-size: 3rem;
+          font-size: 4rem;
           font-weight: 300;
 
           .diode {
@@ -126,13 +126,7 @@ body {
         }
 
         .scorePlayerTwo {
-          font-size: 6rem;
-          font-weight: 200;
-          color: red;
-        }
-
-        .score1 {
-          font-size: 6rem;
+          font-size: 7rem;
           font-weight: 200;
           color: red;
         }
@@ -146,12 +140,12 @@ body {
       justify-content: space-around;
       align-items: center;
       width: 100%;
-      margin-top: 5rem;
+      margin-top: 10rem;
 
       .divCurrent {
         background-color: red;
-        width: 9.5rem;
-        height: 6.5rem;
+        width: 11rem;
+        height: 8rem;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -261,7 +255,8 @@ body {
       font-weight: bold;
       text-align: center;
       position: absolute;
-      top: 40%;
+      z-index: 200;
+      top: 50%;
     }
   }
 }

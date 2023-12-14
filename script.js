@@ -10,11 +10,11 @@ const diodePlayerOne = document.querySelector(".firstPlayer .diode");
 const diodePlayerTwo = document.querySelector(".secondPlayer .diode");
 const numbersOfCurrentOne = document.querySelector(".numbersOfCurrentOne");
 const numbersOfCurrentTwo = document.querySelector(".numbersOfCurrentTwo");
-const confetti = document.querySelector(".confetti-button");
 
 document.addEventListener("DOMContentLoaded", initializeGame);
 
 function initializeGame() {
+  // 1. Initilise les compteurs à zero
   scorePlayerOne.innerText = 0;
   scorePlayerTwo.innerText = 0;
   numbersOfCurrentOne.innerText = 0;
@@ -24,6 +24,8 @@ function initializeGame() {
   globalPlayerOne = 0;
   globalPlayerTwo = 0;
   isPlayerOne = true;
+  // 2. Reset le message du vainqueur pour en afficher un vide
+  document.getElementById("winnerMessage").innerText = "";
   DIODE();
 }
 
@@ -43,9 +45,7 @@ function ROUND() {
       ? (totalPlayerOne += numberOfDice)
       : (totalPlayerTwo += numberOfDice);
   }
-  // 6. Mise à jour de l'affichage des scores sur la page web
-  scorePlayerOne.innerHTML = totalPlayerOne;
-  scorePlayerTwo.innerHTML = totalPlayerTwo;
+  MAJSCORE();
   DIODE();
 }
 
@@ -61,28 +61,49 @@ function GLOBAL() {
     totalPlayerTwo = 0; // 4. Réinitialisation des points du round pour le joueur 2
     isPlayerOne = true;
   }
+  checkForWinner();
+  MAJSCORE();
+  DIODE();
+}
+
+function MAJSCORE() {
   // 5. Mise à jour de l'affichage des scores globaux
   numbersOfCurrentOne.innerHTML = globalPlayerOne;
   numbersOfCurrentTwo.innerHTML = globalPlayerTwo;
   scorePlayerOne.innerHTML = totalPlayerOne;
   scorePlayerTwo.innerHTML = totalPlayerTwo;
-  checkForWinner();
-  DIODE();
 }
 
 function checkForWinner() {
   if (globalPlayerOne >= 100) {
+    // 1. Si le resultat est superieur ou égal à 100, affiche le message html et affiche la librairie
     document.getElementById("winnerMessage").innerText = "Joueur 1 à gagné !";
     jsConfetti.addConfetti();
-    initializeGame();
+    setTimeout(initializeGame, 5000);
   } else if (globalPlayerTwo >= 100) {
+    // 2. Sinon si le resultat est superieur ou égal à 100, affiche le message html et affiche la librairie
     document.getElementById("winnerMessage").innerText = "Joueur 2 à gagné !";
     jsConfetti.addConfetti();
-    initializeGame();
+    setTimeout(initializeGame, 5000);
+  }
+}
+
+function checkForWinner() {
+  let winner =
+    globalPlayerOne >= 100
+      ? "Joueur 1 à gagné !"
+      : globalPlayerTwo >= 100
+      ? "Joueur 2 à gagné !"
+      : null;
+  if (winner) {
+    document.getElementById("winnerMessage").innerText = winner;
+    jsConfetti.addConfetti();
+    setTimeout(initializeGame, 5000);
   }
 }
 
 function DIODE() {
+  // 1. Ajoute la class en fonction de la boolean de isPlayerOne et vrai ou faux
   diodePlayerOne.classList.toggle("diode-active", isPlayerOne);
   diodePlayerTwo.classList.toggle("diode-active", !isPlayerOne);
 }
@@ -90,4 +111,3 @@ function DIODE() {
 buttonNewGame.addEventListener("click", initializeGame);
 buttonOfRollDice.addEventListener("click", ROUND);
 buttonOfHold.addEventListener("click", GLOBAL);
-confetti.addEventListener("click", confetti);

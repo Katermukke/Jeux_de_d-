@@ -53,8 +53,8 @@ body main {
 body main .firstSection {
   display: flex;
   justify-content: space-around;
+  margin-top: 10rem;
   margin-bottom: 4rem;
-  margin-top: 4rem;
 }
 body main .firstSection .firstPlayer {
   display: flex;
@@ -65,7 +65,7 @@ body main .firstSection .firstPlayer {
 body main .firstSection .firstPlayer .playerOne {
   display: flex;
   align-items: center;
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: 300;
 }
 body main .firstSection .firstPlayer .playerOne .diode {
@@ -76,7 +76,7 @@ body main .firstSection .firstPlayer .playerOne .diode-active {
   opacity: 1;
 }
 body main .firstSection .firstPlayer .scorePlayerOne {
-  font-size: 6rem;
+  font-size: 7rem;
   font-weight: 200;
   color: red;
 }
@@ -98,7 +98,7 @@ body main .firstSection .secondPlayer {
 body main .firstSection .secondPlayer .playerTwo {
   display: flex;
   align-items: center;
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: 300;
 }
 body main .firstSection .secondPlayer .playerTwo .diode {
@@ -109,12 +109,7 @@ body main .firstSection .secondPlayer .playerTwo .diode-active {
   opacity: 1;
 }
 body main .firstSection .secondPlayer .scorePlayerTwo {
-  font-size: 6rem;
-  font-weight: 200;
-  color: red;
-}
-body main .firstSection .secondPlayer .score1 {
-  font-size: 6rem;
+  font-size: 7rem;
   font-weight: 200;
   color: red;
 }
@@ -123,12 +118,12 @@ body main .secondSection {
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  margin-top: 5rem;
+  margin-top: 10rem;
 }
 body main .secondSection .divCurrent {
   background-color: red;
-  width: 9.5rem;
-  height: 6.5rem;
+  width: 11rem;
+  height: 8rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -220,5 +215,6 @@ body main #winnerMessage {
   font-weight: bold;
   text-align: center;
   position: absolute;
-  top: 40%;
+  z-index: 200;
+  top: 50%;
 }/*# sourceMappingURL=styles.css.map */
