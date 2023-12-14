@@ -29,9 +29,11 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
     <script src="script.js" defer></script>
     <title>Document</title>
   </head>
+
   <body>
     <div class="divTitle col-12">
       <button id="newGame">
@@ -62,17 +64,43 @@
 
       <div class="firstSection col-12">
         <div class="firstPlayer">
-          <h2 class="playerOne">PLAYER 1</h2>
-          <p class="scorePlayerTwo">43</p>
+          <h2 class="playerOne">
+            PLAYER 1
+            <svg
+              class="diode diode-active"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 200 200"
+              width="15"
+              height="15"
+            >
+              <circle cx="100" cy="100" r="80" fill="red" />
+            </svg>
+          </h2>
+          <p class="scorePlayerOne">43</p>
         </div>
         <div id="diceFace">
           <img src="images/dice5.png" id="dice" alt="image d'un dés" />
         </div>
         <div class="secondPlayer">
-          <h2 class="playerTwo">PLAYER 2</h2>
-          <p class="scorePlayerOne">72</p>
+          <h2 class="playerTwo">
+            PLAYER 2
+            <svg
+              class="diode"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 200 200"
+              width="15"
+              height="15"
+            >
+              <circle cx="100" cy="100" r="80" fill="red" />
+            </svg>
+          </h2>
+          <p class="scorePlayerTwo">72</p>
         </div>
       </div>
+
+      <!--------- Winning Message --------->
+
+      <div id="winnerMessage"></div>
 
       <!--------- SECOND SECTION --------->
 
